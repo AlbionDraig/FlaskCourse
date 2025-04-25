@@ -1,6 +1,6 @@
 # RUN APP
-# flask --app .\src\HelloWorld\Hello.py run
-# flask --app .\src\HelloWorld\Hello.py --debug run
+# flask --app .\src\Hello.py run
+# flask --app .\src\Hello.py --debug run
 
 from flask import Flask
 

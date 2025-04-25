@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <header>
@@ -16,7 +15,6 @@
         {% else %}
             <h2>Hello, Guest!</h2>
         {% endif %}
-        <h2>{{name}}</h2>
         <p>This is the main content of the page.</p>
     </main>
     <footer>

@@ -47,3 +47,16 @@ def repeat(text = '' , times = 0):
 def greeting(name=None):
     data = ['Hello', 'World', 'Flask', 'Python']
     return render_template('demo.html', name=name, data=data)
+
+@app.route('/my_data')
+@app.route('/my_data/<string:name>')
+@app.route('/my_data/<string:name>/<int:age>')
+@app.route('/my_data/<string:name>/<int:age>/<int:height>')
+def my_data(name=None, age=None, height=None):
+    page_name = "MyData"
+    dict_data = {
+        'name': name,
+        'age': age,
+        'height': height
+    }
+    return render_template('my_data.html', page_name=page_name, dict_data=dict_data)

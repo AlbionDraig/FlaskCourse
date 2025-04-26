@@ -1,0 +1,22 @@
+{% extends "boiler.html" %} 
+
+{% block title %}{{page_name}}{% endblock %} 
+
+{% block content %}
+    <!-- Lower filter -->
+    <h1>Welcome to the {{page_name | lower}} page</h1>
+    <!-- Show dictionary info -->
+    {% if dict_data.name == None and dict_data.age == None and dict_data.height == None %}
+        <p>There is no data to show</p>
+    {% else %}
+        <h2>Data Dictionary:</h2>
+        <ul>
+            <!-- If a value doesn'o't exist, it isn't displayed -->
+            {% for key, value in dict_data.items() %}
+                {% if value != None %}
+                    <li>{{ key }}: {{ value }}</li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}

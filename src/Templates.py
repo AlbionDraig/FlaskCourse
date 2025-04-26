@@ -10,4 +10,4 @@ app = Flask(__name__, template_folder='../templates')
 @app.route('/<string:name>')
 def index(name=None):
     data = ['Hello', 'World', 'Flask', 'Python']
-    return render_template('index.html', name=name, data=data)
+    return render_template('demo.html', name=name, data=data)

@@ -10,12 +10,19 @@
         <h1>Welcome to My Website</h1>
     </header>
     <main>
+        <!-- Use if sentence -->
+        <h2>If sentence</h2>
         {% if name %}
-            <h2>Hello, {{ name }}!</h2>
+            <p>Hello, {{ name }}!</p>
         {% else %}
-            <h2>Hello, Guest!</h2>
+            <p>Hello, Guest!</p>
         {% endif %}
-        <p>This is the main content of the page.</p>
+        
+        <!-- Use for sentence -->
+        <h2>For sentence</h2>
+        {% for item in data %}
+            <p>{{ item }}</p>
+        {% endfor %}
     </main>
     <footer>
         <p>&copy; 2023 My Website. All rights reserved.</p>

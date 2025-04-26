@@ -2,7 +2,7 @@
 # flask --app .\src\Templates.py run
 # flask --app .\src\Templates.py --debug run
 
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 from datetime import datetime
 
 app = Flask(__name__, template_folder='../templates')

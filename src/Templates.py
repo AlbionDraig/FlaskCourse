@@ -5,7 +5,7 @@
 from flask import Flask, render_template, url_for
 from datetime import datetime
 
-app = Flask(__name__, template_folder='../templates')
+app = Flask(__name__, template_folder='../templates', static_folder='../static')
 
 @app.add_template_filter
 def format_date(date, format='%Y-%m-%d'):

@@ -5,17 +5,16 @@
 {% block content %}
     <!-- Lower filter -->
     <h1>Welcome to the {{page_name | lower}} page</h1>
-    <!-- Upper filter -->
-    <p>This is the main content of the {{page_name | upper}} page.</p>
-    <!-- Date format created filter -->
-    <p>Current date {{ datetime_now | format_date }}</p>
     <!-- Navigation links -->
-    <p>Navigation links:</p>
     <nav>
         <ul>
             <li><a href="{{ url_for('repeat') }}">Repeat</a></li>
             <li><a href="{{ url_for('repeat', text = 'Frog', times = 4) }}">Repeat Frog 4 times</a></li>
-            <li><a href="{{ url_for('my_data') }}">my_data</a></li>
+            <li><a href="{{ url_for('my_data') }}">My Data</a></li>
         </ul>
     </nav>
+    <!-- Upper filter -->
+    <p>This is the main content of the {{page_name | upper}} page.</p>
+    <!-- Date format created filter -->
+    <p>Current date {{ datetime_now | format_date }}</p>
 {% endblock %}

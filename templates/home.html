@@ -1,0 +1,11 @@
+{% extends "boiler.html" %} 
+
+{% block title %}{{page_name}}{% endblock %} 
+
+{% block content %}
+    <!-- Lower filter -->
+    <h1>Welcome to the {{page_name | lower}} page</h1>
+    <p>This is the main content of the home page.</p>
+    <!-- Date format created filter -->
+    <p>Current date {{ datetime_now | format_date }}</p>
+{% endblock %}

@@ -7,6 +7,16 @@
     <h1>Welcome to the {{page_name | lower}} page</h1>
     <!-- Upper filter -->
     <p>This is the main content of the {{page_name | upper}} page.</p>
+    <!-- Repeat filter -->
+    {% if text and text != "" and times and times != 0 %}
+        <p>Text: {{text}}</p>
+        <p>Times: {{times}}</p>
+        <p>Repeat: {{ repeat_times(text, times) }}</p>
+    {% else %}
+        <p>Text: Demo</p>
+        <p>Times: 3</p>
+        <p>Repeat: {{ repeat_times("Demo", 3) }}</p>
+    {% endif %}
     <!-- Date format created filter -->
     <p>Current date {{ datetime_now | format_date }}</p>
 {% endblock %}
